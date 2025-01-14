@@ -1,0 +1,412 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-padding-top: 70px; 
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #FBFBFB;
+  font-family: 'mewatonia', Arial, sans-serif;
+ 
+}
+
+section {
+  margin-top: 70px;
+}
+
+@font-face {
+  font-family: 'mewatonia';
+  src: url('font/MEWATONIA.ttf') format('truetype');  
+}
+
+/* nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  height: 65px;
+  transition: box-shadow 0.5s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.nav-container .title-nav {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFB38E;
+}
+
+.nav-container .links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-container .links a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  color: #FFB38E;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s linear;
+}
+
+.nav-container .links a:hover {
+  color: #DE8F5F;
+  border-bottom: 2px solid;
+}
+/* end nav */
+
+/* main container */
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-container .image{
+  width: 500px;
+  height:90vh;
+  overflow: hidden;
+}
+
+.main-container .image img{
+  width: 100%;
+}
+
+.main-container .content{
+  color: #FFB38E;
+  width: 40%;
+  min-height: 100px;
+}
+
+.content h1{
+  font-size: 28px;
+}
+
+.content h1 span{
+  font-weight: 700;
+  color: #DE8F5F;
+}
+
+.typing-text{
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+}
+
+.content p{
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #D8AE7E;
+}
+
+/* Social media*/ 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-top: 10px;
+}
+
+.social-links a {
+  text-decoration: none; 
+}
+
+button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #DE8F5F;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #DE8F5F;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+button span {
+  margin: 10px;
+}
+
+button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+button:hover {
+  color: #fff;
+  border: 1px solid #DE8F5F;
+}
+
+button:hover::before {
+  box-shadow: inset 0 0 0 10em #DE8F5F
+}
+
+/* button download cv */ 
+.comic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #DE8F5F;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #272727;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #DE8F5F;
+  border: 2px solid #DE8F5F;
+  box-shadow: 5px 5px 0px #DE8F5F;
+}
+
+.comic-button:active {
+  background-color: #FFB38E;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+/* end main container */
+
+/* resume container */
+.resume-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: #FFB38E;
+}
+
+.content-resume {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.right {
+  flex: 1;
+}
+
+.education .skills {
+  width: 100%;
+}
+
+.education-item .skills-item {
+  display: flex;
+  width: 100%;
+}
+
+/* education section */
+.education h1 {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.education-item h3 {
+ letter-spacing: 1px;
+  margin-right: 15px;
+  margin-bottom: 5px; 
+  color: #fff;
+}
+
+.education-item td h4{
+  margin-top: 15px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.education-item td p{
+  margin-top: 5px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* end education content */
+
+/* skills section */
+.skills-item{
+  margin-top: 25px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.skills h1{
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.skills-item td {
+  margin: 10px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skills-point {
+  position: relative;
+  padding-left: 25px;
+  border-left: 4px solid #fff;
+  margin-bottom: 10px;
+}
+/* end skills section */
+/* end resume container */
+
+/* experience section */
+.experience {
+  height: 100%;
+  padding: 50px;
+}
+
+.experience .title-experience {
+  color: #DE8F5F;
+  font-size: 40px;
+  text-align: center;
+}
+
+.experience h2 {
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #FFB38E;
+}
+
+.experience h3 {
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.experience table{
+  margin-top: 3px;
+}
+
+.experience td {
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style-type: none;
+}
+
+.point {
+  position: relative;
+  padding-left: 25px;
+  border-left: 4px solid #FFB38E;
+  margin-bottom: 10px;
+}
+/* end experience section */
+
+/* footer */
+footer {
+  background-color: #FFB38E;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__social-links a {
+  display: inline-block;
+}
+
+.footer__social-links svg {
+  vertical-align: middle;
+  fill: white;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.footer__social-links svg:hover {
+  fill: #FFD7B5;
+  transform: scale(1.2);
+}
+
+.footer__social-links a[aria-label="Instagram"] svg {
+  font-size: 50px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer__social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* end footer */
